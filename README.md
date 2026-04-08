@@ -40,9 +40,4 @@ Visit [http://localhost:3000](http://localhost:3000).
 3. Import the repository.
 4. Keep defaults and click **Deploy**.
 
-## Demo Video Suggestion
 
-- Use Loom or OBS.
-- Show desktop and mobile responsiveness.
-- Demo drag range selection, page flip, notes CRUD, and keyboard arrows.
-- Keep it around 60-90 seconds for a concise showcase.
