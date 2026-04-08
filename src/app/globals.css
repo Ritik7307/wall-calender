@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Wall calendar: always “lit room” paper contrast (immune to dark-mode body text) */
+.wall-calendar-scene {
+  --calendar-paper: #faf8f3;
+  --calendar-paper-edge: #e8e4db;
+  --calendar-ink: #1c1917;
+  --calendar-muted: #78716c;
+  --calendar-wall-outline: rgba(28, 25, 23, 0.12);
+}
+
+.wall-calendar-scene .calendar-paper-texture {
+  background-color: var(--calendar-paper);
+  background-image:
+    radial-gradient(ellipse 120% 80% at 50% -20%, rgba(255, 255, 255, 0.7), transparent 55%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, transparent 40%),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 24px,
+      rgba(28, 25, 23, 0.03) 24px,
+      rgba(28, 25, 23, 0.03) 25px
+    );
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
